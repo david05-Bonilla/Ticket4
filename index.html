@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shipping Rules Engine</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form>
+        <h1>Shipping System</h1>
+        <label for="Purchase">Enter the total of the purchase </label>
+        <input id="totalPurchase" type="number" placeholder="$">
+
+        <label for="Weight">Enter the weight </label>
+        <input id="totalweight" type="number" placeholder="kg">
+
+        <label for="Destination">Enter the Destination</label>
+        <select name="local" id="isLocal">
+            <option value="true">Local</option>
+            <option value="false">Internacional</option>
+        </select>
+
+        <label for="urgency">Enter the urgency</label>
+        <select name="Priority" id="IsPriority">
+            <option value="true">Priority</option>
+            <option value="false">No Priority</option>
+        </select>
+
+        <button type="button" onclick="Extra_cost()">Calculate</button>
+        <p id="total"></p>
+        <p id="ExtraCost"></p>
+        <p id="tipeUrgency"></p>
+        <p id="hasExtraCost"></p>
+    </form>
+
+    <script src="js/logic.js"></script>
+</body>
+</html>
+ 
