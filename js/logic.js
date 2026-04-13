@@ -1,5 +1,5 @@
 function Extra_cost() {
-    let Purchase = Number(document.getElementById("totalPurchase").value);
+    let Charge = Number(document.getElementById("totalPurchase").value);
     let Weight = Number(document.getElementById("totalweight").value);
     let isInternacional = document.getElementById("isLocal").value === "false";
     let Priority = document.getElementById("IsPriority").value === "true"
@@ -11,8 +11,8 @@ function Extra_cost() {
     
 
     
-   if (Purchase <= 0 || Weight <= 0) {
-        extraCostP.textContent = "Please enter a valid purchase amount";
+   if (Charge <= 0 || Weight <= 0) {
+        extraCostP.textContent = "Please enter a valid Charge";
         totalP.textContent = "";
         return;
     }
@@ -22,7 +22,7 @@ function Extra_cost() {
         extraCostRate =  0.10;
     }
            
-    if (Purchase > 0){
+    if (Charge > 0){
         if(isInternacional){
             
             extraCostRate += 0.05; 
@@ -33,8 +33,8 @@ function Extra_cost() {
         }
     }
     
-    let extraCostAmount = Purchase * extraCostRate;
-    let finalTotal = Purchase + extraCostAmount;
+    let extraCostAmount = Charge * extraCostRate;
+    let finalTotal = Charge + extraCostAmount;
     let hasExtraCost = extraCostRate > 0;
     let shippingType = Priority ? " Is Priority" : "Standard Shipping";
     hasExtraCostP.textContent = `Extra cost applied: ${hasExtraCost}`;
